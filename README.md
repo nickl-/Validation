@@ -263,9 +263,10 @@ Reference
   * v::cnh()
   * v::cnpj()
   * v::cpf()
-  * v::domain()
   * v::directory()
+  * v::domain()
   * v::email()
+  * v::file()
   * v::ip()
   * v::json()
   * v::macAddress()
@@ -752,6 +753,16 @@ See also
 
   * v::odd()
   * v::multiple()
+
+#### v::file()
+
+Validates files.
+
+    v::file()->validate(__FILE__); //true
+
+This validator will consider SplFileInfo instances, so you can do something like:
+
+    v::file()->validate(new \SplFileInfo($file));
 
 #### v::float()
 
